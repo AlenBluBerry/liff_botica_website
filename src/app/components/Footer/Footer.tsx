@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import ContactUs from '../ContactUs/ContactUs'; // ✅ Ensure this path is correct
-
+import Img from '../Img'; // ✅ Ensure this path is correct
 const footerLinks = [
     {
         title: 'Company',
@@ -116,7 +116,13 @@ const Footer = () => {
                             whileTap={{ scale: 0.95 }}
                             transition={{ type: 'spring', stiffness: 300 }}
                         >
-                            <img src={link.icon} alt={link.name} className="w-6 h-6" />
+                            <Img
+  src={link.icon}
+  alt={link.name}
+  className="w-6 h-6"
+  width={24}
+  height={24}
+/>
                         </motion.a>
                     ))}
                 </div>

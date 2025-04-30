@@ -4,7 +4,14 @@ import React, { useRef, useEffect } from 'react';
 import { motion, useInView, useAnimationControls } from 'framer-motion';
 import { Sparkles, Heart, CheckCircle } from 'lucide-react';
 
-const coreValues = [
+// Define the type for the coreValues array
+interface CoreValue {
+  name: string;
+  description: string;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>; // Type for the icon (React component)
+}
+
+const coreValues: CoreValue[] = [
   {
     name: 'Quality',
     description: 'We deliver the highest quality and purity in every drop.',
@@ -23,7 +30,7 @@ const coreValues = [
 ];
 
 const CoreValues = () => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null); // Corrected type for ref
   const isInView = useInView(ref, { once: true });
   const controls = useAnimationControls();
 
@@ -46,7 +53,14 @@ const CoreValues = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
-  const Card = ({ icon, name, description }: any) => {
+  // Define the type for the Card component props
+  interface CardProps {
+    icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+    name: string;
+    description: string;
+  }
+
+  const Card: React.FC<CardProps> = ({ icon, name, description }) => {
     return (
       <div className="w-full h-64 perspective">
         <div className="relative w-full h-full transition-transform duration-700 transform-style group hover:rotate-y-180">

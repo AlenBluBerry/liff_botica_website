@@ -99,9 +99,11 @@ const AboutUs = () => {
                 About Us
               </h2>
               <div className="p-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-full shadow-md">
-                <img
-                  src="info.gif"
+                <Image
+                  src="/info.gif"
                   alt="About Icon"
+                  width={40}
+                  height={40}
                   className="w-10 h-10"
                 />
               </div>
@@ -142,9 +144,11 @@ const AboutUs = () => {
                 NLYV® - Enriching Lifestyle
               </h3>
               <div className="p-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md rounded-full shadow-md">
-                <img
-                  src="brand.gif"
+                <Image
+                  src="/brand.gif"
                   alt="NLYV Icon"
+                  width={32}
+                  height={32}
                   className="w-8 h-8"
                 />
               </div>
