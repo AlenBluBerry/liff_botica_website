@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { Leaf, Droplet, IceCream } from "lucide-react";
 
 interface DistributorshipProps {
   className?: string;
@@ -21,19 +21,19 @@ const Distributorship: React.FC<DistributorshipProps> = ({ className }) => {
 
   const items = [
     {
-      icon: <Leaf className="w-8 h-8 text-green-600" />,
+      iconSrc: "/green-tea.png",
       title: "Maharani Tea",
       description:
         "Delivering the finest blends with captivating aroma and rich taste. A premium experience in every cup.",
     },
     {
-      icon: <Droplet className="w-8 h-8 text-blue-500" />,
+      iconSrc: "/water-bottle.gif",
       title: "Packaged Drinking Water",
       description:
         "Clean, purified, and mineral-balanced hydration for health-conscious consumers.",
     },
     {
-      icon: <IceCream className="w-8 h-8 text-pink-500" />,
+      iconSrc: "/ice-pop.gif",
       title: "Skippi Ice Pops",
       description:
         "India’s first hygienic ice pops brand—natural, fun, and featured on Shark Tank India!",
@@ -41,7 +41,9 @@ const Distributorship: React.FC<DistributorshipProps> = ({ className }) => {
   ];
 
   return (
-    <section className={cn("py-20 px-4 md:px-8 bg-white dark:bg-gray-900", className)}>
+    <section
+      className={cn("py-20 px-4 md:px-8 bg-white dark:bg-gray-900", className)}
+    >
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial="hidden"
@@ -67,11 +69,22 @@ const Distributorship: React.FC<DistributorshipProps> = ({ className }) => {
               key={index}
               className="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 text-center transition hover:shadow-xl"
             >
-              <div className="flex justify-center mb-4">{item.icon}</div>
+              <div className="flex justify-center mb-4">
+                <Image
+                  src={item.iconSrc}
+                  alt={item.title + " icon"}
+                  width={96}
+                  height={96}
+                  className="w-24 h-24 object-contain"
+                  priority={index === 0}
+                />
+              </div>
               <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
                 {item.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm">{item.description}</p>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
+                {item.description}
+              </p>
             </div>
           ))}
         </motion.div>

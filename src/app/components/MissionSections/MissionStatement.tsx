@@ -1,15 +1,15 @@
-import React, { ElementType } from 'react';
+import React, { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 
-interface TextEffectProps {
-  children: string;
-  preset?: string;
+type TextEffectProps = {
+  children: ReactNode; // Allow any ReactNode
+  preset?: 'fade-in-blur' | 'fade-in' | 'slide-in-top' | 'slide-in-bottom' | 'zoom-in';
   speedSegment?: number;
-  as?: ElementType;
+  as?: React.ElementType;
   className?: string;
   delay?: number;
   per?: 'character' | 'word' | 'line';
-}
+};
 
 const TextEffect = ({
   children,
@@ -20,6 +20,7 @@ const TextEffect = ({
   delay = 0,
   per = "character",
 }: TextEffectProps) => {
+
   const getPresetVariants = (presetType: string) => {
     switch (presetType) {
       case "fade-in-blur":
@@ -57,6 +58,18 @@ const TextEffect = ({
 
   const variants = getPresetVariants(preset);
 
+  // Enforce children to be string at runtime
+  const textContent = typeof children === 'string' ? children : '';
+
+  if (typeof children !== 'string') {
+    console.error("TextEffect component expects 'children' to be a string.");
+    return (
+      <Component className={className}>
+        {/* Render fallback or nothing */}
+      </Component>
+    );
+  }
+
   const splitText = (text: string) => {
     if (per === "character") return text.split("");
     if (per === "word") return text.split(" ");
@@ -64,7 +77,7 @@ const TextEffect = ({
     return [text];
   };
 
-  const textArray = splitText(children);
+  const textArray = splitText(textContent);
 
   return (
     <Component className={className} style={{ display: 'block' }}>

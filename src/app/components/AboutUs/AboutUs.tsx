@@ -75,12 +75,13 @@ const AboutUs = () => {
             <Card className="overflow-hidden rounded-3xl shadow-2xl max-h-[450px]">
               <div className="relative h-full">
                 <Image
-                  src="/download.jpeg"
+                  src="/LIFEBOTICA_logo-2.png"
                   alt="Life Botica Products"
-                  width={1200}
+                  width={800}
                   height={800}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-40 transition-opacity duration-300" />
               </div>
             </Card>
@@ -110,22 +111,23 @@ const AboutUs = () => {
             </div>
 
             <p className="text-gray-700 dark:text-gray-300 text-base sm:text-lg leading-relaxed">
-              Welcome to{" "}
-              <strong className="geist-bold">Life Botica LLP</strong>, where{" "}
-              <strong className="geist-bold">tradition</strong>,{" "}
+              Welcome to <strong className="geist-bold">Life Botica LLP</strong>
+              , where <strong className="geist-bold">tradition</strong>,{" "}
               <strong className="geist-bold">innovation</strong>, and{" "}
-              <strong className="geist-bold">quality</strong> converge to form a trusted brand across India.
+              <strong className="geist-bold">quality</strong> converge to form a
+              trusted brand across India.
             </p>
             <p className="text-gray-700 dark:text-gray-300 text-base sm:text-lg leading-relaxed">
-              We are committed to{" "}
-              <strong className="geist-bold">purity</strong> and{" "}
-              <strong className="geist-bold">authenticity</strong>, delivering premium products that enhance your daily lifestyle.
+              We are committed to <strong className="geist-bold">purity</strong>{" "}
+              and <strong className="geist-bold">authenticity</strong>,
+              delivering premium products that enhance your daily lifestyle.
             </p>
             <p className="text-gray-700 dark:text-gray-300 text-base sm:text-lg leading-relaxed">
-              Focused on{" "}
-              <strong className="geist-bold">excellence</strong> and{" "}
-              <strong className="geist-bold">customer satisfaction</strong>, we are proud to be a{" "}
-              <strong className="geist-bold">household name</strong> in wellness.
+              Focused on <strong className="geist-bold">excellence</strong> and{" "}
+              <strong className="geist-bold">customer satisfaction</strong>, we
+              are proud to be a{" "}
+              <strong className="geist-bold">household name</strong> in
+              wellness.
             </p>
           </motion.div>
         </div>
@@ -157,22 +159,32 @@ const AboutUs = () => {
             <Card>
               <CardContent>
                 <p className="text-gray-700 dark:text-gray-300 text-base sm:text-lg leading-relaxed">
-                  Our flagship brand, <strong className="geist-bold">NLYV</strong>, is built upon the rich heritage of{" "}
-                  <strong className="geist-bold">wood-pressing techniques</strong>, ensuring every drop of wood-pressed
-                  cooking oil retains its <strong className="geist-bold">natural essence</strong>,{" "}
+                  Our flagship brand,{" "}
+                  <strong className="geist-bold">NLYV</strong>, is built upon
+                  the rich heritage of{" "}
+                  <strong className="geist-bold">
+                    wood-pressing techniques
+                  </strong>
+                  , ensuring every drop of wood-pressed cooking oil retains its{" "}
+                  <strong className="geist-bold">natural essence</strong>,{" "}
                   <strong className="geist-bold">rich nutrition</strong>, and{" "}
                   <strong className="geist-bold">wholesome goodness</strong>.
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 text-base sm:text-lg leading-relaxed">
                   Featuring <strong className="geist-bold">Groundnut</strong>,{" "}
-                  <strong className="geist-bold">Safflower</strong>, <strong className="geist-bold">Sunflower</strong>,{" "}
-                  <strong className="geist-bold">Coconut</strong>, <strong className="geist-bold">Sesame</strong>, and{" "}
-                  <strong className="geist-bold">Mustard oils</strong>, <strong className="geist-bold">NLYV</strong>{" "}
-                  guarantees <strong className="geist-bold">pure</strong>,{" "}
+                  <strong className="geist-bold">Safflower</strong>,{" "}
+                  <strong className="geist-bold">Sunflower</strong>,{" "}
+                  <strong className="geist-bold">Coconut</strong>,{" "}
+                  <strong className="geist-bold">Sesame</strong>, and{" "}
+                  <strong className="geist-bold">Mustard oils</strong>,{" "}
+                  <strong className="geist-bold">NLYV</strong> guarantees{" "}
+                  <strong className="geist-bold">pure</strong>,{" "}
                   <strong className="geist-bold">unrefined</strong>, and{" "}
-                  <strong className="geist-bold">chemical-free</strong> cooking oils—empowering health-conscious
-                  individuals to embrace better nutrition and{" "}
-                  <strong className="geist-bold">authentic flavors</strong> in everyday meals.
+                  <strong className="geist-bold">chemical-free</strong> cooking
+                  oils—empowering health-conscious individuals to embrace better
+                  nutrition and{" "}
+                  <strong className="geist-bold">authentic flavors</strong> in
+                  everyday meals.
                 </p>
                 <Discover />
               </CardContent>
