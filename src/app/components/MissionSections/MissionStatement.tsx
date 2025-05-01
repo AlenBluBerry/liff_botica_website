@@ -1,38 +1,43 @@
 import React from 'react';
+import { Leaf, ShieldCheck, PackageCheck, Truck } from 'lucide-react';
 
-interface MissionStatementProps {
-  children?: React.ReactNode;
-}
-
-const MissionStatement: React.FC<MissionStatementProps> = () => {
+const MissionStatement = () => {
   return (
-    <div className="my-8 space-y-6">
-      <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-        Our mission is simple yet powerful: to bring 
-        <span className="font-semibold text-green-600 dark:text-green-400"> natural</span>, 
-        <span className="font-semibold text-green-600 dark:text-green-400"> healthy</span>, and 
-        <span className="font-semibold text-green-600 dark:text-green-400"> authentic products</span> to households across India. 
-        Every offering is crafted with 
-        <span className="font-semibold text-green-600 dark:text-green-400"> purity</span> and 
-        <span className="font-semibold text-green-600 dark:text-green-400"> quality</span> in mind, 
-        ensuring that our customers receive nothing but the 
-        <span className="font-semibold text-green-600 dark:text-green-400"> best</span>. 
-        From sourcing 
-        <span className="font-semibold text-green-600 dark:text-green-400"> premium ingredients</span> to using 
-        <span className="font-semibold text-green-600 dark:text-green-400"> food-grade packaging</span> that 
-        safeguards freshness, we never compromise on excellence.
-      </p>
-      
-      <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-        We take pride in our 
-        <span className="font-semibold text-green-600 dark:text-green-400"> swift delivery</span> and 
-        <span className="font-semibold text-green-600 dark:text-green-400"> unwavering commitment</span> to quality, 
-        earning the trust and loyalty of our valued customers. For us, it&apos;s not just about delivering products&mdash;it&apos;s about 
-        <span className="font-semibold text-green-600 dark:text-green-400"> enhancing lives</span> with 
-        <span className="font-semibold text-green-600 dark:text-green-400"> pure</span>, 
-        <span className="font-semibold text-green-600 dark:text-green-400"> natural</span>, and 
-        <span className="font-semibold text-green-600 dark:text-green-400"> thoughtfully crafted</span> offerings.
-      </p>
+    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 my-8">
+      <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center">
+        <Leaf className="w-12 h-12 text-green-600 mb-4" />
+        <h3 className="text-xl font-bold text-green-700 dark:text-green-300 mb-2">Our Mission</h3>
+        <p className="text-gray-700 dark:text-gray-300">
+          Bringing <span className="font-bold text-green-600">natural</span>,{' '}
+          <span className="font-bold text-green-600">healthy</span>, and{' '}
+          <span className="font-bold text-green-600">authentic</span> products to households across India.
+        </p>
+      </div>
+
+      <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center">
+        <ShieldCheck className="w-12 h-12 text-green-600 mb-4" />
+        <h3 className="text-xl font-bold text-green-700 dark:text-green-300 mb-2">Purity & Quality</h3>
+        <p className="text-gray-700 dark:text-gray-300">
+          Crafted with <span className="font-bold text-green-600">purity</span> and{' '}
+          <span className="font-bold text-green-600">quality</span> in mind, ensuring the best for every customer.
+        </p>
+      </div>
+
+      <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center">
+        <PackageCheck className="w-12 h-12 text-green-600 mb-4" />
+        <h3 className="text-xl font-bold text-green-700 dark:text-green-300 mb-2">Safe Packaging</h3>
+        <p className="text-gray-700 dark:text-gray-300">
+          Using <span className="font-bold text-green-600">food-grade packaging</span> that safeguards freshness without compromise.
+        </p>
+      </div>
+
+      <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center">
+        <Truck className="w-12 h-12 text-green-600 mb-4" />
+        <h3 className="text-xl font-bold text-green-700 dark:text-green-300 mb-2">Trust & Delivery</h3>
+        <p className="text-gray-700 dark:text-gray-300">
+          Swift delivery and a commitment to quality that earns the trust and loyalty of our customers.
+        </p>
+      </div>
     </div>
   );
 };
