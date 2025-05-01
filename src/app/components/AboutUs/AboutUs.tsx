@@ -77,8 +77,8 @@ const AboutUs = () => {
                 <Image
                   src="/LIFEBOTICA_logo-2.png"
                   alt="Life Botica Products"
-                  width={800}
-                  height={800}
+                  width={300}
+                  height={300}
                   className="w-full h-full object-contain"
                 />
 
