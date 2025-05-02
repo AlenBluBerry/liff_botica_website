@@ -36,7 +36,7 @@ const Distributorship: React.FC<DistributorshipProps> = ({ className }) => {
       iconSrc: "/ice-pop.gif",
       title: "Skippi Ice Pops",
       description:
-        "India’s first hygienic ice pops brand—natural, fun, and featured on Shark Tank India!",
+        "India's first hygienic ice pops brand—natural, fun, and featured on Shark Tank India!",
     },
   ];
 
@@ -77,6 +77,7 @@ const Distributorship: React.FC<DistributorshipProps> = ({ className }) => {
                   height={96}
                   className="w-24 h-24 object-contain"
                   priority={index === 0}
+                  unoptimized
                 />
               </div>
               <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
